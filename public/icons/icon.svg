@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Calsuma">
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f1ece1"/>
+      <stop offset="1" stop-color="#ded7c6"/>
+    </linearGradient>
+    <linearGradient id="lcd" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bcc9ad"/>
+      <stop offset="1" stop-color="#9fb08e"/>
+    </linearGradient>
+    <linearGradient id="eq" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ef7a3d"/>
+      <stop offset="1" stop-color="#d9531f"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#cbc3b1"/>
+  <rect x="86" y="70" width="340" height="372" rx="52" fill="url(#body)" stroke="#b7ad97" stroke-width="3"/>
+  <rect x="120" y="104" width="272" height="96" rx="20" fill="#1c1d18"/>
+  <rect x="130" y="114" width="252" height="76" rx="12" fill="url(#lcd)"/>
+  <text x="366" y="172" font-family="ui-monospace, monospace" font-size="52" font-weight="700" fill="#26301d" text-anchor="end">88.8</text>
+  <g fill="#e4ddcd" stroke="#c4bba6" stroke-width="2">
+    <rect x="120" y="228" width="56" height="46" rx="14"/>
+    <rect x="192" y="228" width="56" height="46" rx="14"/>
+    <rect x="264" y="228" width="56" height="46" rx="14"/>
+    <rect x="120" y="292" width="56" height="46" rx="14"/>
+    <rect x="192" y="292" width="56" height="46" rx="14"/>
+    <rect x="264" y="292" width="56" height="46" rx="14"/>
+    <rect x="120" y="356" width="56" height="46" rx="14"/>
+    <rect x="192" y="356" width="56" height="46" rx="14"/>
+    <rect x="264" y="356" width="56" height="46" rx="14"/>
+  </g>
+  <g fill="#33343a">
+    <rect x="336" y="228" width="56" height="46" rx="14"/>
+    <rect x="336" y="292" width="56" height="46" rx="14"/>
+  </g>
+  <rect x="336" y="356" width="56" height="46" rx="14" fill="url(#eq)"/>
+</svg>
