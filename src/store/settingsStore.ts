@@ -22,7 +22,7 @@ interface SettingsState extends Settings {
 }
 
 export const useSettingsStore = create<SettingsState>()(
-  persist(
+  persist<SettingsState, [], [], Settings>(
     (set, get) => ({
       ...DEFAULT_SETTINGS,
       hydrated: false,
@@ -48,7 +48,7 @@ export const useSettingsStore = create<SettingsState>()(
     }),
     {
       name: STORAGE_KEYS.settings,
-      storage: createJSONStorage<SettingsState>(),
+      storage: createJSONStorage<Settings>(),
       partialize: (state): Settings => ({
         theme: state.theme,
         mode: state.mode,

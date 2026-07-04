@@ -58,6 +58,9 @@ interface CalculatorState {
   setHydrated: () => void;
 }
 
+/** Subset of state written to storage (see `partialize` below). */
+type PersistedCalculatorState = Pick<CalculatorState, 'history' | 'memory' | 'hasMemory'>;
+
 /** Read the live precision/angle settings without subscribing. */
 const readSettings = () => {
   const { precision, angleUnit, autoHistory } = useSettingsStore.getState();
@@ -81,7 +84,7 @@ const capHistory = (entries: HistoryEntry[]): HistoryEntry[] => {
 };
 
 export const useCalculatorStore = create<CalculatorState>()(
-  persist(
+  persist<CalculatorState, [], [], PersistedCalculatorState>(
     (set, get) => ({
       expression: '',
       result: null,
@@ -302,7 +305,7 @@ export const useCalculatorStore = create<CalculatorState>()(
     }),
     {
       name: STORAGE_KEYS.calculator,
-      storage: createJSONStorage<CalculatorState>(),
+      storage: createJSONStorage<PersistedCalculatorState>(),
       partialize: (state) => ({
         history: state.history,
         memory: state.memory,
